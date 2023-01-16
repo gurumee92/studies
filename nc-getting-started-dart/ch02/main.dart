@@ -24,4 +24,12 @@ void main(List<String> args) {
     for (var friend in oldFrineds) "bb $friend",
   ];
   print(newFrineds);
+
+  // map
+  var player = {
+    "name": "nico",
+    "age": 19,
+    "score": 5.0,
+  };
+  print(player);
 }
