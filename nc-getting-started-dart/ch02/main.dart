@@ -32,4 +32,8 @@ void main(List<String> args) {
     "score": 5.0,
   };
   print(player);
+
+  // set
+  var s = {1, 2, 3, 4};
+  print(s.difference({2, 3}));
 }
