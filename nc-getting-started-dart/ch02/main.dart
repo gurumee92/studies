@@ -6,7 +6,7 @@ void main(List<String> args) {
     2,
     3,
     4,
-    if (giveMeFive) 5, // for if
+    if (giveMeFive) 5, // collection if
   ];
   print(numbers);
 
@@ -15,4 +15,13 @@ void main(List<String> args) {
   var age = 10;
   var greeting = "Hello everyone, my name is ${name} my age is ${age + 2}";
   print(greeting);
+
+  // collection for
+  var oldFrineds = ["nico", "lynn"];
+  var newFrineds = [
+    "lewis",
+    "ralph",
+    for (var friend in oldFrineds) "bb $friend",
+  ];
+  print(newFrineds);
 }
