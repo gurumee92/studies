@@ -1,11 +1,19 @@
-class Player {
+enum XP { begginer, expert, pro }
+
+class QuickRunner {
+  void run() {
+    print("ruuuuuuuuuuuuuuuun!");
+  }
+}
+
+class Player with QuickRunner {
   String name;
-  int xp;
+  XP xp;
 
   Player({required this.name, required this.xp});
-  Player.create1000XpPlayer({required String name})
+  Player.createProPlayer({required String name})
       : this.name = name,
-        this.xp = 1000;
+        this.xp = XP.pro;
 
   void sayHello() {
     print("$name, $xp");
@@ -13,10 +21,14 @@ class Player {
 }
 
 void main(List<String> args) {
-  var p1 = Player(name: "gurumee", xp: 1500)
+  var p1 = Player(name: "gurumee", xp: XP.begginer)
     ..name = "nico"
-    ..xp = 50;
+    ..xp = XP.expert;
   p1.sayHello();
-  var p2 = Player.create1000XpPlayer(name: "nico");
+  p1.run();
+  var p2 = Player.createProPlayer(name: "nico");
   p2.sayHello();
+
+  var t = XP.begginer;
+  print(t);
 }
