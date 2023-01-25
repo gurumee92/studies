@@ -25,8 +25,8 @@ class App extends StatelessWidget {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        const Text(
+                      children: const [
+                        Text(
                           "Hey, Selena",
                           style: TextStyle(
                             color: Colors.white,
@@ -37,7 +37,7 @@ class App extends StatelessWidget {
                         Text(
                           "Welcome back",
                           style: TextStyle(
-                            color: Colors.white.withOpacity(0.7),
+                            color: Color.fromRGBO(255, 255, 255, 0.8),
                             fontSize: 18,
                           ),
                         ),
