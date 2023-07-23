@@ -24,3 +24,33 @@ Mac + IntelliJ 사용 시, 단축키
 * 실행: ctrl + shift + r 
 * 한 줄 복사: cmd + d
 * 한 줄 이동: alt + shift + 위/아래 방향키 
+
+### 힌트 2.
+
+* 변수 선언 및 할당
+```java
+public class Gugudan {
+    public static void main(String[] args) {
+        int result = 4 * 1;
+        System.out.println(result);
+
+        result = 4 * 2;
+        System.out.println(result);
+    }
+}
+```
+* 사용자 지정 입력 방법
+```java
+import java.util.Scanner;
+
+public class Gugudan {
+public static void main(String[] args) {
+  System.out.println("구구단 중 출력할 단은? : ");
+  Scanner scanner = new Scanner(System.in);
+  int number = scanner.nextInt();
+  System.out.println("number : " + number);
+  int result = number * 1;                
+  // 구구단 출력하는 예제 구현        
+}
+}
+```

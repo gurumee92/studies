@@ -1,25 +1,29 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // 2단
-        System.out.printf("%d x %d = %d\n", 2, 1, 2 * 1);
-        System.out.printf("%d x %d = %d\n", 2, 2, 2 * 2);
-        System.out.printf("%d x %d = %d\n", 2, 3, 2 * 3);
-        System.out.printf("%d x %d = %d\n", 2, 1, 2 * 4);
-        System.out.printf("%d x %d = %d\n", 2, 2, 2 * 5);
-        System.out.printf("%d x %d = %d\n", 2, 3, 2 * 6);
-        System.out.printf("%d x %d = %d\n", 2, 1, 2 * 7);
-        System.out.printf("%d x %d = %d\n", 2, 2, 2 * 8);
-        System.out.printf("%d x %d = %d\n", 2, 3, 2 * 9);
+        System.out.println("구구단 중 출력할 단은? : ");
+        Scanner scanner = new Scanner(System.in);
+        final int number = scanner.nextInt();
+        System.out.printf("number: %d\n", number);
 
-        // 3단
-        System.out.printf("%d x %d = %d\n", 2, 1, 3 * 1);
-        System.out.printf("%d x %d = %d\n", 2, 2, 3 * 2);
-        System.out.printf("%d x %d = %d\n", 2, 3, 3 * 3);
-        System.out.printf("%d x %d = %d\n", 2, 1, 3 * 4);
-        System.out.printf("%d x %d = %d\n", 2, 2, 3 * 5);
-        System.out.printf("%d x %d = %d\n", 2, 3, 3 * 6);
-        System.out.printf("%d x %d = %d\n", 2, 1, 3 * 7);
-        System.out.printf("%d x %d = %d\n", 2, 2, 3 * 8);
-        System.out.printf("%d x %d = %d\n", 2, 3, 3 * 9);
+        int result = number * 1;
+        System.out.printf("%d x %d = %d\n", number, 1, result);
+        result = number * 2;
+        System.out.printf("%d x %d = %d\n", number, 2, result);
+        result = number * 3;
+        System.out.printf("%d x %d = %d\n", number, 3, result);
+        result = number * 4;
+        System.out.printf("%d x %d = %d\n", number, 4, result);
+        result = number * 5;
+        System.out.printf("%d x %d = %d\n", number, 5, result);
+        result = number * 6;
+        System.out.printf("%d x %d = %d\n", number, 6, result);
+        result = number * 7;
+        System.out.printf("%d x %d = %d\n", number, 7, result);
+        result = number * 8;
+        System.out.printf("%d x %d = %d\n", number, 8, result);
+        result = number * 9;
+        System.out.printf("%d x %d = %d\n", number, 9, result);
     }
 }
