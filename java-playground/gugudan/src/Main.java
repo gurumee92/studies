@@ -7,23 +7,9 @@ public class Main {
         final int number = scanner.nextInt();
         System.out.printf("number: %d\n", number);
 
-        int result = number * 1;
-        System.out.printf("%d x %d = %d\n", number, 1, result);
-        result = number * 2;
-        System.out.printf("%d x %d = %d\n", number, 2, result);
-        result = number * 3;
-        System.out.printf("%d x %d = %d\n", number, 3, result);
-        result = number * 4;
-        System.out.printf("%d x %d = %d\n", number, 4, result);
-        result = number * 5;
-        System.out.printf("%d x %d = %d\n", number, 5, result);
-        result = number * 6;
-        System.out.printf("%d x %d = %d\n", number, 6, result);
-        result = number * 7;
-        System.out.printf("%d x %d = %d\n", number, 7, result);
-        result = number * 8;
-        System.out.printf("%d x %d = %d\n", number, 8, result);
-        result = number * 9;
-        System.out.printf("%d x %d = %d\n", number, 9, result);
+        for (int i=1; i<=9; i++) {
+            int result = number * i;
+            System.out.printf("%d x %d = %d\n", number, i, result);
+        }
     }
 }

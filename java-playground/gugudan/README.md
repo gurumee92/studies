@@ -54,3 +54,28 @@ public static void main(String[] args) {
 }
 }
 ```
+
+### 힌트 3.
+
+* while 문
+```java
+public class Gugudan {
+    public static void main(String[] args) {
+        int i = 1;
+        while (i < 10) {
+            // 곱셈 결과 출력
+            // i 값을 1 증가
+        }
+    }
+}
+```
+* for 문
+```java
+public class Gugudan {
+    public static void main(String[] args) {
+        for(int i = 1; i < 10; i++) {
+            // 곱셈 결과 출력
+        }
+    }
+}
+```
