@@ -1,12 +1,10 @@
-import java.util.Arrays;
-
-public class GuGudan {
+public class Gugudan {
     public static final int MIN = 2;
-    public static final int MAX = 19;
+    public static final int MAX = 9;
     private final int factor;
     private int[] dan;
 
-    public GuGudan(int factor) {
+    public Gugudan(int factor) {
         this.factor = factor;
     }
     private boolean isValidate() {
@@ -18,13 +16,8 @@ public class GuGudan {
             throw new GugudanValidateException(factor);
         }
 
-        if (factor < 10) {
-            dan = new int[9];
-        } else {
-            dan = new int[MAX];
-        }
-
-        for (int i = 0; i < dan.length; i++) {
+        dan = new int [MAX];
+        for (int i = 0; i < MAX; i++) {
             dan[i] = factor * (i + 1);
         }
     }
@@ -44,13 +37,17 @@ public class GuGudan {
         }
     }
 
-    public void print(int finsihed) throws GugudanInitializeException {
+    public void printUntilFinished(int finished) throws GugudanInitializeException, GugudanPrintUnitilFinishedValidateException {
         if (isInitialize()) {
             throw new GugudanInitializeException();
         }
 
-        System.out.printf("출력할 단은?: %d\n", factor);
-        for (int i = 0; i < dan.length; i++) {
+        if (MIN > finished || MAX < finished) {
+            throw new GugudanPrintUnitilFinishedValidateException(finished);
+        }
+
+        System.out.printf("출력할 단은?: %d, 어디까지? %d\n", factor, finished);
+        for (int i = 0; i < finished; i++) {
             System.out.printf("%d x %d = %d\n", factor, (i+1), dan[i]);
         }
     }
@@ -70,6 +67,18 @@ public class GuGudan {
     private static class GugudanInitializeException extends Exception{
         GugudanInitializeException() {
             super("단이 초기화되지 않았습니다.");
+        }
+    }
+
+    private static class GugudanPrintUnitilFinishedValidateException extends Exception{
+        private int finished;
+        GugudanPrintUnitilFinishedValidateException(int finished) {
+            this.finished = finished;
+        }
+
+        @Override
+        public String getMessage() {
+            return String.format("finished %d는 %d-%d 사이 수가 아닙니다.", finished, MIN, MAX);
         }
     }
 }
