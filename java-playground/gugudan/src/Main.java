@@ -10,8 +10,7 @@ public class Main {
         final String[] split = input.split(regex);
         final int time = Integer.parseInt(split[0]);
         final int row = Integer.parseInt(split[1]);
-        
-        
+
         // 2. 입력 validation
         InputRangeValidator timeRangeValidator = new InputRangeValidator(TimesTable.TIME_MIN, TimesTable.TIME_MAX);
         InputRangeValidator rowRangeValidator = new InputRangeValidator(TimesTable.ROW_MIN, TimesTable.ROW_MAX);
