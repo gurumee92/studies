@@ -16,7 +16,7 @@ public class Main {
             System.exit(1);
         }
 
-        for (int i=1; i<=9; i++) {
+        for (int i = 1; i <= 9; i++) {
             int result = number * i;
             System.out.printf("%d x %d = %d\n", number, i, result);
         }
