@@ -69,12 +69,31 @@ public class Gugudan {
     }
 }
 ```
+
 * for 문
 ```java
 public class Gugudan {
     public static void main(String[] args) {
         for(int i = 1; i < 10; i++) {
             // 곱셈 결과 출력
+        }
+    }
+}
+```
+
+### 힌트 4.
+
+* if 문
+```java
+public class Gugudan {
+    public static void main(String[] args) {
+        int number = 1;
+        if (number < 2) {
+            // 에러 메세지
+        } else if (number > 9) {
+            // 에러 메세지
+        } else {
+            // 구구단 출력
         }
     }
 }
