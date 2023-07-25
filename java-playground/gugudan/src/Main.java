@@ -6,13 +6,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         final int number = scanner.nextInt();
 
-        if (number < 2) {
-            System.out.printf("입력한 숫자 %d가 2보다 작습니다.\n", number);
-            System.exit(1);
-        }
-
-        if (number > 9) {
-            System.out.printf("입력한 숫자 %d가 9보다 큽니다.\n", number);
+        if (number < 2 || number > 9) {
+            System.out.printf("입력한 숫자 %d가 2-9 사이 수가 아닙니다.\n", number);
             System.exit(1);
         }
 
