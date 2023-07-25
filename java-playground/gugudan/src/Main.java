@@ -3,10 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String inputValue = scanner.nextLine();
-        String[] splitedValue = inputValue.split(",");
-        int factor = Integer.parseInt(splitedValue[0]);
-        int finished = Integer.parseInt(splitedValue[1]);
+        final String input = scanner.nextLine();
+        final String regex = ",";
+        final String[] split = input.split(regex);
+        final int factor = Integer.parseInt(split[0]);
+        final int finished = Integer.parseInt(split[1]);
 
         Gugudan gugudan = new Gugudan(factor);
         try {
