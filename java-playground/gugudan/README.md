@@ -29,7 +29,7 @@ Mac + IntelliJ 사용 시, 단축키
 
 * 변수 선언 및 할당
 ```java
-public class Gugudan {
+public class TimesTable {
     public static void main(String[] args) {
         int result = 4 * 1;
         System.out.println(result);
@@ -43,7 +43,7 @@ public class Gugudan {
 ```java
 import java.util.Scanner;
 
-public class Gugudan {
+public class TimesTable {
 public static void main(String[] args) {
   System.out.println("구구단 중 출력할 단은? : ");
   Scanner scanner = new Scanner(System.in);
@@ -59,7 +59,7 @@ public static void main(String[] args) {
 
 * while 문
 ```java
-public class Gugudan {
+public class TimesTable {
     public static void main(String[] args) {
         int i = 1;
         while (i < 10) {
@@ -72,7 +72,7 @@ public class Gugudan {
 
 * for 문
 ```java
-public class Gugudan {
+public class TimesTable {
     public static void main(String[] args) {
         for(int i = 1; i < 10; i++) {
             // 곱셈 결과 출력
@@ -85,7 +85,7 @@ public class Gugudan {
 
 * if 문
 ```java
-public class Gugudan {
+public class TimesTable {
     public static void main(String[] args) {
         int number = 1;
         if (number < 2) {
@@ -103,7 +103,7 @@ public class Gugudan {
 
 * 배열
 ```java
-public class Gugudan {
+public class TimesTable {
     public static void main(String[] args) {
         int[] result = new int[9];
 
@@ -116,7 +116,7 @@ public class Gugudan {
 
 ### 힌트 6.
 ```java
-public class Gugudan {
+public class TimesTable {
     public static int[] calculate(int times) {
         int[] result = new int[9];
 
@@ -148,15 +148,15 @@ public class Main {
     public static void main(String[] args) {
         for (int j = 2; j < 10; j++) {
             // Gugudan의 calculate와 print 메소드 활용해 구구단 구현하기
-                        // Gugudan.calculate(j)와 같이 메소드를 호출할 수 있음.
+                        // TimesTable.calculate(j)와 같이 메소드를 호출할 수 있음.
         }
     }
 }
 ```
 
-Gugudan
+TimesTable
 ```java
-public class Gugudan {
+public class TimesTable {
     public static int[] calculate(int times) {
         int[] result = new int[9];
 
