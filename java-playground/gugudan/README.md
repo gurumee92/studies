@@ -98,3 +98,18 @@ public class Gugudan {
     }
 }
 ```
+
+### 힌트 5.
+
+* 배열
+```java
+public class Gugudan {
+    public static void main(String[] args) {
+        int[] result = new int[9];
+
+        for(int j=2; j < 10; j++) {
+            // 앞 단계 실습을 참고해 반복문을 활용해 result 배열에 결과 값을 담고 출력
+        }
+    }
+}
+```
