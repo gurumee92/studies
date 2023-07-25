@@ -42,7 +42,7 @@ public class Gugudan {
             throw new GugudanInitializeException();
         }
 
-        if (MIN > finished || MAX < finished) {
+        if (1 > finished || MAX < finished) {
             throw new GugudanPrintUnitilFinishedValidateException(finished);
         }
 
@@ -78,7 +78,7 @@ public class Gugudan {
 
         @Override
         public String getMessage() {
-            return String.format("finished %d는 %d-%d 사이 수가 아닙니다.", finished, MIN, MAX);
+            return String.format("finished %d는 %d-%d 사이 수가 아닙니다.", finished, 1, MAX);
         }
     }
 }
