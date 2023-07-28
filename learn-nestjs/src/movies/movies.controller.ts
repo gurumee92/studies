@@ -1,23 +1,14 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  NotFoundException,
-  Param,
-  Patch,
-  Post,
-  Query,
-} from '@nestjs/common';
-import { MoviesService } from './movies.service';
-import { Movie } from './entities/movies.entity';
+import {Body, Controller, Delete, Get, Param, Patch, Post,} from '@nestjs/common';
+import {MoviesService} from './movies.service';
+import {Movie} from './entities/movies.entity';
+import {CreateMovieDto} from "./dto/movies.dto";
 
 @Controller('movies')
 export class MoviesController {
   constructor(private readonly moviesService: MoviesService) {}
 
   @Post()
-  create(@Body() movieData) {
+  create(@Body() movieData: CreateMovieDto) {
     return this.moviesService.create(movieData);
   }
 
@@ -27,21 +18,17 @@ export class MoviesController {
   }
 
   @Get('/:id')
-  getOne(@Param('id') id: string): Movie {
-    const movie = this.moviesService.getOne(id);
-    if (!movie) {
-      throw new NotFoundException(`Movie with ID: ${id} not found.`);
-    }
-    return movie;
+  getOne(@Param('id') id: number): Movie {
+    return this.moviesService.getOne(id);
   }
 
   @Delete('/:id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.moviesService.remove(id);
   }
 
   @Patch('/:id')
-  update(@Param('id') id: string, @Body() updateData) {
+  update(@Param('id') id: number, @Body() updateData) {
     return this.moviesService.update(id, updateData);
   }
 }
