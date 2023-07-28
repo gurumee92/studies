@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Movie } from './movies.entities';
-import {CreateMovieDto, UpdateMovieDto} from './movies.dtos';
+import { CreateMovieDto, UpdateMovieDto } from './movies.dtos';
 
 @Injectable()
 export class MoviesService {
