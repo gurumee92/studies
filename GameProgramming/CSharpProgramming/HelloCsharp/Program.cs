@@ -13,10 +13,23 @@
             GiftBox a = NewGiftBox(letter: "A 친구야 잘 지내니?", money: 100_000);
             GiftBox b = NewGiftBox(letter: "B 친구야 잘 지내니?", money: 120_000);
             GiftBox c = NewGiftBox(letter: "C 친구야 잘 지내니?", money: 130_000);
-            
-            PrintGiftBox(a);
-            PrintGiftBox(b);
-            PrintGiftBox(c);
+
+            List<GiftBox> boxes = [a, b];
+            boxes.Add(c);
+            for (int i = 0; i < boxes.Count; i++)
+            {
+                boxes[i].Money += 100;
+            }
+
+            foreach (GiftBox box in boxes)
+            {
+                PrintGiftBox(box);
+            }
+
+            foreach (var item in boxes)
+            {
+                PrintGiftBox(item);
+            }
         }
         private static GiftBox NewGiftBox(string letter, int money)
         {
@@ -34,5 +47,3 @@
         }
     }
 }
-
-
